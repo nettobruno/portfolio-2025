@@ -1,0 +1,61 @@
+/* Reset CSS básico */
+
+/* Remover as margens e o padding padrão de todos os elementos */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remover o estilo padrão de fontes e listas */
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol, li,
+figure, figcaption {
+  font-size: 100%;
+  font-family: inherit;
+  font-weight: inherit;
+  line-height: 1;
+}
+
+/* Remover a formatação de links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remover o estilo de bordas em inputs e outros campos de formulário */
+input, button, select, textarea {
+  border: none;
+  outline: none;
+  background: none;
+  font: inherit;
+}
+
+/* Evitar espaços extras nos elementos de lista */
+ul, ol {
+  list-style: none;
+}
+
+/* Evitar que imagens ou vídeos estiquem além de seus contêineres */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Definir a base de estilo para o body */
+body {
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
