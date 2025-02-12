@@ -1,7 +1,11 @@
+"use client"
+
+import Tag from "@/ui/Tag";
+
 export default function Home() {
   return (
     <main>
-      <div>Hello world!</div>
+      <Tag text="First Tag"/>
     </main>
   );
 }
