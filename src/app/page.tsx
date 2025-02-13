@@ -6,7 +6,7 @@ import Button from "@/ui/Button";
 import CardSkills from "@/ui/CardSkills";
 import CardProjects from "@/ui/CardProjects";
 import Input from "@/ui/Input";
-import { Code2, ChevronDown, Code, Heart } from "lucide-react";
+import { ChevronDown, Code, Heart } from "lucide-react";
 import {
   Header,
   Title,
@@ -14,7 +14,11 @@ import {
   InfoText,
   BlockArrow,
   AboutSection,
+  SkillsSection,
+  TitleSection,
+  GridSkillsSection,
 } from "./page.style";
+import { skills } from "@/constants/skills";
 
 export default function Home() {
   const handleClick = () => {
@@ -64,6 +68,24 @@ export default function Home() {
         </div>
       </AboutSection>
 
+      <SkillsSection>
+        <TitleSection>Habilidades e Tecnologias</TitleSection>
+
+        <GridSkillsSection className="container">
+          {skills.map((skill, index) => {
+            return (
+              <CardSkills
+                key={index}
+                icon={<skill.icon color="rgba(92,156,84,1)" size={24} />}
+                title={skill.title}
+                description={skill.description}
+                tags={skill.tags}
+              />
+            );
+          })}
+        </GridSkillsSection>
+      </SkillsSection>
+
       <Tag text="First Tag" />
       <Button onClick={handleClick}>First Button</Button>
       <Input
@@ -71,12 +93,7 @@ export default function Home() {
         value={inputValue}
         onChange={handleChange}
       />
-      <CardSkills
-        icon={<Code2 color="rgba(92,156,84,1)" size={24} />}
-        title="Frontend Development"
-        description="Building responsive and interactive user interfaces with modern frameworks and libraries."
-        tags={["React", "Typescript", "NextJS"]}
-      />
+
       <CardProjects
         image="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000"
         title="Frontend Development"

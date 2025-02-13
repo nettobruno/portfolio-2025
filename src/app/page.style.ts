@@ -80,3 +80,23 @@ export const AboutSection = styled.section`
     gap: 0.5rem;
   }
 `;
+
+export const SkillsSection = styled.section`
+  background-color: #000;
+  padding: 10rem 0;
+`;
+
+export const TitleSection = styled.h2`
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+`;
+
+export const GridSkillsSection = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+`;
