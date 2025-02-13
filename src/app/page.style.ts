@@ -98,6 +98,7 @@ export const TitleSection = styled.h2`
 export const GridSkillsSection = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 1.5rem;
 `;
 
@@ -109,5 +110,6 @@ export const ProjectsSection = styled.section`
 export const GridProjectsSection = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
   gap: 1.5rem;
 `;
