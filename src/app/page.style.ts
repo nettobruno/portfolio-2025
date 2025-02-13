@@ -17,7 +17,8 @@ export const Header = styled.header`
   max-width: 100vw;
   height: 100vh;
   background-color: #000;
-
+  background-image: radial-gradient(circle at center, rgba(92, 156, 84, 0.2) 0%, transparent 70%);  /* Gradiente */
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
