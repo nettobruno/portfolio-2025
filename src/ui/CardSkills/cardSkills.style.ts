@@ -9,6 +9,13 @@ export const StyledCardSkills = styled.div`
 
   padding: 1.5rem;
   border-radius: 0.75rem;
+
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: rgb(31, 41, 55);
+    border-color: rgba(92, 156, 84, 0.2);
+  }
 `;
 
 export const BlockIcon = styled.div`
