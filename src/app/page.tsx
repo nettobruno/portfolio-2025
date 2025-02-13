@@ -17,8 +17,11 @@ import {
   SkillsSection,
   TitleSection,
   GridSkillsSection,
+  ProjectsSection,
+  GridProjectsSection
 } from "./page.style";
 import { skills } from "@/constants/skills";
+import { projects } from "@/constants/projects";
 
 export default function Home() {
   const handleClick = () => {
@@ -86,21 +89,32 @@ export default function Home() {
         </GridSkillsSection>
       </SkillsSection>
 
+      <ProjectsSection>
+        <TitleSection>Projetos em destaque</TitleSection>
+
+        <GridProjectsSection className="container">
+          {projects.map((project, index) => {
+            return (
+              <CardProjects
+              key={index}
+                image={project.image}
+                title={project.title}
+                description={project.description}
+                tags={project.tags}
+                codeUrl={project.codeUrl}
+                demoUrl={project.demoUrl}
+              />
+            );
+          })}
+        </GridProjectsSection>
+      </ProjectsSection>
+
       <Tag text="First Tag" />
       <Button onClick={handleClick}>First Button</Button>
       <Input
         placeholder="Digite algo..."
         value={inputValue}
         onChange={handleChange}
-      />
-
-      <CardProjects
-        image="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000"
-        title="Frontend Development"
-        description="Building responsive and interactive user interfaces with modern frameworks and libraries."
-        tags={["React", "Typescript", "NextJS"]}
-        codeUrl="#"
-        demoUrl="#"
       />
     </main>
   );
