@@ -54,17 +54,19 @@ export default function Home() {
           <h2>
             <Code color="rgba(92,156,84,1)" size={32} /> Sobre Mim
           </h2>
+
           <p>
-            Minha jornada pela codificação começou com o fascínio pela criação
-            de experiências interativas na web. O que começou como curiosidade
-            rapidamente evoluiu para uma paixão por criar interfaces bonitas e
-            funcionais com as quais os usuários adoram interagir.
+            Sou Bruno Netto, desenvolvedor Front End com mais de 4 anos de
+            experiência, especializado em ReactJS, NextJS e Typescript. Minha
+            paixão é transformar ideias em experiências digitais únicas, criando
+            interfaces incríveis e soluções inovadoras.
           </p>
+
           <p>
-            Como desenvolvedor front-end, combino conhecimento técnico com
-            solução criativa de problemas para construir aplicações web
-            modernas. Estou constantemente explorando novas tecnologias e
-            ampliando os limites do que é possível no desenvolvimento web.
+            Sempre em busca de novos desafios e aprimoramento contínuo, também
+            adoro compartilhar conhecimento e ajudar outros desenvolvedores a
+            crescer. Se você está procurando alguém para levar seu projeto ao
+            próximo nível, vamos conversar e fazer acontecer!
           </p>
 
           <span>
