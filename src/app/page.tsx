@@ -1,12 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import Tag from "@/ui/Tag";
 import Button from "@/ui/Button";
 import CardSkills from "@/ui/CardSkills";
 import CardProjects from "@/ui/CardProjects";
 import Input from "@/ui/Input";
-import { ChevronDown, Code, Heart, Send } from "lucide-react";
+import { ChevronDown, Heart, Code, Send } from "lucide-react";
 import {
   Header,
   Title,
@@ -21,6 +20,8 @@ import {
   GridProjectsSection,
   FormSection,
   SubtitleSection,
+  FooterSection,
+  PulsingHeartIcon
 } from "./page.style";
 import { skills } from "@/constants/skills";
 import { projects } from "@/constants/projects";
@@ -143,6 +144,10 @@ export default function Home() {
           </Button>
         </form>
       </FormSection>
+
+      <FooterSection>
+        <p>Feito com <PulsingHeartIcon color="rgba(92,156,84,1)" size={16} /> por Bruno Netto</p>
+      </FooterSection>
     </main>
   );
 }

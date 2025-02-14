@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
+import { Heart } from "lucide-react";
 
-// Definindo a animação de balanço
 const bounce = keyframes`
    0% {
     transform: translateY(0);
@@ -10,6 +10,18 @@ const bounce = keyframes`
   }
   100% {
     transform: translateY(0);
+  }
+`;
+
+const pulse = keyframes`
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
   }
 `;
 
@@ -139,4 +151,22 @@ export const SubtitleSection = styled.p`
   margin-bottom: 1rem;
   text-align: center;
   margin-bottom: 3rem;
+`;
+
+export const FooterSection = styled.footer`
+  background-color: #000;
+  padding: 2rem 0;
+  color: rgb(156, 163, 175);
+
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: .5rem;
+  }
+`;
+
+export const PulsingHeartIcon = styled(Heart)`
+  animation: ${pulse} 1.5s infinite;
 `;
