@@ -20,11 +20,13 @@ import {
   GridProjectsSection,
   FormSection,
   SubtitleSection,
+  TrustedBySection,
   FooterSection,
-  PulsingHeartIcon
+  PulsingHeartIcon,
 } from "./page.style";
 import { skills } from "@/constants/skills";
 import { projects } from "@/constants/projects";
+import Image from "next/image";
 
 export default function Home() {
   const handleForm = () => {
@@ -110,6 +112,24 @@ export default function Home() {
         </GridProjectsSection>
       </ProjectsSection>
 
+      <TrustedBySection>
+        <TitleSection>Marcas que trabalhei</TitleSection>
+
+        <div>
+          <Image src="/images/locomotiva.svg" width={150} height={100} alt="" />
+
+          <Image src="/images/hexalab.svg" width={150} height={100} alt="" />
+
+          <Image src="/images/coobrastur.svg" width={150} height={100} alt="" />
+
+          <Image src="/images/mirante.svg" width={150} height={100} alt="" />
+
+          <Image src="/images/uol.svg" width={150} height={100} alt="" />
+
+          <Image src="/images/gb.svg" width={150} height={100} alt="" />
+        </div>
+      </TrustedBySection>
+
       <FormSection>
         <TitleSection>Vamos nos conectar</TitleSection>
         <SubtitleSection>
@@ -146,7 +166,10 @@ export default function Home() {
       </FormSection>
 
       <FooterSection>
-        <p>Feito com <PulsingHeartIcon color="rgba(92,156,84,1)" size={16} /> por Bruno Netto</p>
+        <p>
+          Feito com <PulsingHeartIcon color="rgba(92,156,84,1)" size={16} /> por
+          Bruno Netto
+        </p>
       </FooterSection>
     </main>
   );
