@@ -17,8 +17,12 @@ export const Header = styled.header`
   max-width: 100vw;
   height: 100vh;
   background-color: #000;
-  background-image: radial-gradient(circle at center, rgba(92, 156, 84, 0.2) 0%, transparent 70%);  /* Gradiente */
-  
+  background-image: radial-gradient(
+    circle at center,
+    rgba(92, 156, 84, 0.2) 0%,
+    transparent 70%
+  ); /* Gradiente */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -71,7 +75,7 @@ export const AboutSection = styled.section`
   }
 
   span {
-    color: rgba(92,156,84,1);
+    color: rgba(92, 156, 84, 1);
     font-size: 1rem;
     line-height: inherit;
 
@@ -112,4 +116,27 @@ export const GridProjectsSection = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   gap: 1.5rem;
+`;
+
+export const FormSection = styled.form`
+  background-color: #000;
+  padding: 10rem 0;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    max-width: 800px;
+    margin: 0 auto;
+  }
+`;
+
+export const SubtitleSection = styled.p`
+  font-size: 1rem;
+  line-height: inherit;
+  color: rgb(156, 163, 175);
+  margin-bottom: 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
 `;

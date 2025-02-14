@@ -6,7 +6,7 @@ import Button from "@/ui/Button";
 import CardSkills from "@/ui/CardSkills";
 import CardProjects from "@/ui/CardProjects";
 import Input from "@/ui/Input";
-import { ChevronDown, Code, Heart } from "lucide-react";
+import { ChevronDown, Code, Heart, Send } from "lucide-react";
 import {
   Header,
   Title,
@@ -18,21 +18,21 @@ import {
   TitleSection,
   GridSkillsSection,
   ProjectsSection,
-  GridProjectsSection
+  GridProjectsSection,
+  FormSection,
+  SubtitleSection,
 } from "./page.style";
 import { skills } from "@/constants/skills";
 import { projects } from "@/constants/projects";
 
 export default function Home() {
-  const handleClick = () => {
-    console.log("Botão clicado");
+  const handleForm = () => {
+    console.log(inputName, inputEmail, inputMessage);
   };
 
-  const [inputValue, setInputValue] = useState<string>("");
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-  };
+  const [inputName, setInputName] = useState<string>("");
+  const [inputEmail, setInputEmail] = useState<string>("");
+  const [inputMessage, setInputMessage] = useState<string>("");
 
   return (
     <main>
@@ -96,7 +96,7 @@ export default function Home() {
           {projects.map((project, index) => {
             return (
               <CardProjects
-              key={index}
+                key={index}
                 image={project.image}
                 title={project.title}
                 description={project.description}
@@ -109,13 +109,40 @@ export default function Home() {
         </GridProjectsSection>
       </ProjectsSection>
 
-      <Tag text="First Tag" />
-      <Button onClick={handleClick}>First Button</Button>
-      <Input
-        placeholder="Digite algo..."
-        value={inputValue}
-        onChange={handleChange}
-      />
+      <FormSection>
+        <TitleSection>Vamos nos conectar</TitleSection>
+        <SubtitleSection>
+          Tem um projeto em mente? Eu adoraria ouvir sobre isso.
+        </SubtitleSection>
+
+        <form>
+          <Input
+            name="name"
+            placeholder="Nome"
+            value={inputName}
+            onChange={(e) => setInputName(e.target.value)}
+          />
+
+          <Input
+            name="email"
+            placeholder="E-mail"
+            value={inputEmail}
+            onChange={(e) => setInputEmail(e.target.value)}
+          />
+
+          <Input
+            name="message"
+            placeholder="Mensagem"
+            value={inputMessage}
+            isTextarea
+            onChange={(e) => setInputMessage(e.target.value)}
+          />
+
+          <Button onClick={handleForm}>
+            <Send size={20} /> Enviar Mensagem
+          </Button>
+        </form>
+      </FormSection>
     </main>
   );
 }
