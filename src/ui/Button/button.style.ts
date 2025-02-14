@@ -11,6 +11,11 @@ export const StyledButton = styled.button`
   font-weight: 500;
   font-size: 1rem;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+
   &:hover {
     background-color: rgba(92,156,84,0.8);
     cursor: pointer;
