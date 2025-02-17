@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Button from "@/ui/Button";
-import CardSkills from "@/ui/CardSkills";
-import CardProjects from "@/ui/CardProjects";
-import Input from "@/ui/Input";
+import Button from "@/ui/components/Button";
+import CardSkills from "@/ui/components/CardSkills";
+import CardProjects from "@/ui/components/CardProjects";
+import Input from "@/ui/components/Input";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { ChevronDown, Heart, Code, Send } from "lucide-react";
