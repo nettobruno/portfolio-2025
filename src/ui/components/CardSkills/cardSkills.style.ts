@@ -6,6 +6,7 @@ export const StyledCardSkills = styled.div`
   gap: 1rem;
   max-width: 350px;
   width: 100%;
+  height: 100%;
 
   padding: 1.5rem;
   border-radius: 0.75rem;

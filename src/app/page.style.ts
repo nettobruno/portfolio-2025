@@ -13,27 +13,6 @@ const pulse = keyframes`
   }
 `;
 
-export const SkillsSection = styled.section`
-  background-color: #000;
-  padding: 10rem 0;
-`;
-
-export const TitleSection = styled.h2`
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  color: white;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-align: center;
-`;
-
-export const GridSkillsSection = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 1.5rem;
-`;
-
 export const ProjectsSection = styled.section`
   background-color: #000;
   padding: 10rem 0;
@@ -73,11 +52,16 @@ export const TrustedBySection = styled.section`
   background-color: #000;
   padding: 2rem 0;
 
-  border-bottom: 1px solid transparent; 
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(156, 163, 175, .3) 50%, rgba(0, 0, 0, 0) 100%);
+  border-bottom: 1px solid transparent;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(156, 163, 175, 0.3) 50%,
+    rgba(0, 0, 0, 0) 100%
+  );
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 100% 1px; 
+  background-size: 100% 1px;
 
   div {
     display: flex;

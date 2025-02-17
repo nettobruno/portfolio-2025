@@ -3,16 +3,14 @@
 import { useState } from "react";
 import HeaderSection from "@/ui/sections/HeaderSection";
 import AboutSection from "@/ui/sections/AboutSection";
+import SkillsSection from "@/ui/sections/SkillsSection";
+import TitleSection from "@/ui/components/TitleSection";
 import Button from "@/ui/components/Button";
-import CardSkills from "@/ui/components/CardSkills";
 import CardProjects from "@/ui/components/CardProjects";
 import Input from "@/ui/components/Input";
 
 import { Send } from "lucide-react";
 import {
-  SkillsSection,
-  TitleSection,
-  GridSkillsSection,
   ProjectsSection,
   GridProjectsSection,
   FormSection,
@@ -21,7 +19,6 @@ import {
   FooterSection,
   PulsingHeartIcon,
 } from "./page.style";
-import { skills } from "@/constants/skills";
 import { projects } from "@/constants/projects";
 import Image from "next/image";
 
@@ -38,27 +35,10 @@ export default function Home() {
     <main>
       <HeaderSection />
       <AboutSection />
-
-      <SkillsSection>
-        <TitleSection>Habilidades e Tecnologias</TitleSection>
-
-        <GridSkillsSection className="container">
-          {skills.map((skill, index) => {
-            return (
-              <CardSkills
-                key={index}
-                icon={<skill.icon color="rgba(92,156,84,1)" size={24} />}
-                title={skill.title}
-                description={skill.description}
-                tags={skill.tags}
-              />
-            );
-          })}
-        </GridSkillsSection>
-      </SkillsSection>
+      <SkillsSection />
 
       <ProjectsSection>
-        <TitleSection>Projetos em destaque</TitleSection>
+        <TitleSection text="Projetos em destaque" />
 
         <GridProjectsSection className="container">
           {projects.map((project, index) => {
@@ -78,7 +58,7 @@ export default function Home() {
       </ProjectsSection>
 
       <TrustedBySection>
-        <TitleSection>Marcas que trabalhei</TitleSection>
+        <TitleSection text="Marcas que trabalhei" />
 
         <div>
           <Image src="/images/locomotiva.svg" width={150} height={100} alt="" />
@@ -96,7 +76,7 @@ export default function Home() {
       </TrustedBySection>
 
       <FormSection>
-        <TitleSection>Vamos nos conectar</TitleSection>
+        <TitleSection text="Vamos nos conectar" />
         <SubtitleSection>
           Tem um projeto em mente? Eu adoraria ouvir sobre isso.
         </SubtitleSection>
