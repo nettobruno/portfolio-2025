@@ -4,22 +4,19 @@ import { useState } from "react";
 import HeaderSection from "@/ui/sections/HeaderSection";
 import AboutSection from "@/ui/sections/AboutSection";
 import SkillsSection from "@/ui/sections/SkillsSection";
+import ProjectsSection from "@/ui/sections/ProjectsSection";
 import TitleSection from "@/ui/components/TitleSection";
 import Button from "@/ui/components/Button";
-import CardProjects from "@/ui/components/CardProjects";
 import Input from "@/ui/components/Input";
 
 import { Send } from "lucide-react";
 import {
-  ProjectsSection,
-  GridProjectsSection,
   FormSection,
   SubtitleSection,
   TrustedBySection,
   FooterSection,
   PulsingHeartIcon,
 } from "./page.style";
-import { projects } from "@/constants/projects";
 import Image from "next/image";
 
 export default function Home() {
@@ -36,26 +33,7 @@ export default function Home() {
       <HeaderSection />
       <AboutSection />
       <SkillsSection />
-
-      <ProjectsSection>
-        <TitleSection text="Projetos em destaque" />
-
-        <GridProjectsSection className="container">
-          {projects.map((project, index) => {
-            return (
-              <CardProjects
-                key={index}
-                image={project.image}
-                title={project.title}
-                description={project.description}
-                tags={project.tags}
-                codeUrl={project.codeUrl}
-                demoUrl={project.demoUrl}
-              />
-            );
-          })}
-        </GridProjectsSection>
-      </ProjectsSection>
+      <ProjectsSection />
 
       <TrustedBySection>
         <TitleSection text="Marcas que trabalhei" />

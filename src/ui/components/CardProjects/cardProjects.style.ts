@@ -4,6 +4,7 @@ export const StyledCardProjects = styled.div`
   background-color: rgb(17, 24, 39);
   max-width: 350px;
   width: 100%;
+  height: 100%;
   border-radius: 0.75rem;
 
   img {
