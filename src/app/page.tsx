@@ -5,6 +5,7 @@ import HeaderSection from "@/ui/sections/HeaderSection";
 import AboutSection from "@/ui/sections/AboutSection";
 import SkillsSection from "@/ui/sections/SkillsSection";
 import ProjectsSection from "@/ui/sections/ProjectsSection";
+import TrustedBySection from "@/ui/sections/TrustedBySection";
 import TitleSection from "@/ui/components/TitleSection";
 import Button from "@/ui/components/Button";
 import Input from "@/ui/components/Input";
@@ -13,11 +14,9 @@ import { Send } from "lucide-react";
 import {
   FormSection,
   SubtitleSection,
-  TrustedBySection,
   FooterSection,
   PulsingHeartIcon,
 } from "./page.style";
-import Image from "next/image";
 
 export default function Home() {
   const handleForm = () => {
@@ -34,24 +33,7 @@ export default function Home() {
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
-
-      <TrustedBySection>
-        <TitleSection text="Marcas que trabalhei" />
-
-        <div>
-          <Image src="/images/locomotiva.svg" width={150} height={100} alt="" />
-
-          <Image src="/images/hexalab.svg" width={150} height={100} alt="" />
-
-          <Image src="/images/coobrastur.svg" width={150} height={100} alt="" />
-
-          <Image src="/images/mirante.svg" width={150} height={100} alt="" />
-
-          <Image src="/images/uol.svg" width={150} height={100} alt="" />
-
-          <Image src="/images/gb.svg" width={150} height={100} alt="" />
-        </div>
-      </TrustedBySection>
+      <TrustedBySection />
 
       <FormSection>
         <TitleSection text="Vamos nos conectar" />
