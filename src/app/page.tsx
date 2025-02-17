@@ -5,6 +5,8 @@ import Button from "@/ui/Button";
 import CardSkills from "@/ui/CardSkills";
 import CardProjects from "@/ui/CardProjects";
 import Input from "@/ui/Input";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { ChevronDown, Heart, Code, Send } from "lucide-react";
 import {
   Header,
@@ -29,6 +31,11 @@ import { projects } from "@/constants/projects";
 import Image from "next/image";
 
 export default function Home() {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
   const handleForm = () => {
     console.log(inputName, inputEmail, inputMessage);
   };
@@ -40,17 +47,45 @@ export default function Home() {
   return (
     <main>
       <Header>
-        <Title data-text="Bruno Netto">Bruno Netto</Title>
-        <JobTitle>Front End Developer</JobTitle>
-        <InfoText>23 years old • Creative Coder</InfoText>
+        <Title
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+          data-text="Bruno Netto"
+        >
+          Bruno Netto
+        </Title>
+        <JobTitle
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        >
+          Front End Developer
+        </JobTitle>
+        <InfoText
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        >
+          23 years old • Creative Coder
+        </InfoText>
 
-        <BlockArrow>
+        <BlockArrow
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 1 }}
+        >
           <ChevronDown size={36} />
         </BlockArrow>
       </Header>
 
-      <AboutSection>
-        <div className="container">
+      <AboutSection ref={ref}>
+        <motion.div
+          initial={{ opacity: 0, y: 200 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.2 }}
+          className="container"
+        >
           <h2>
             <Code color="rgba(92,156,84,1)" size={32} /> Sobre Mim
           </h2>
@@ -73,7 +108,7 @@ export default function Home() {
             <Heart color="rgba(92,156,84,1)" size={20} /> Criando experiências
             perfeitas com código
           </span>
-        </div>
+        </motion.div>
       </AboutSection>
 
       <SkillsSection>
