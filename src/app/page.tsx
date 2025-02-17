@@ -2,15 +2,14 @@
 
 import { useState } from "react";
 import HeaderSection from "@/ui/sections/HeaderSection";
+import AboutSection from "@/ui/sections/AboutSection";
 import Button from "@/ui/components/Button";
 import CardSkills from "@/ui/components/CardSkills";
 import CardProjects from "@/ui/components/CardProjects";
 import Input from "@/ui/components/Input";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { Heart, Code, Send } from "lucide-react";
+
+import { Send } from "lucide-react";
 import {
-  AboutSection,
   SkillsSection,
   TitleSection,
   GridSkillsSection,
@@ -27,11 +26,6 @@ import { projects } from "@/constants/projects";
 import Image from "next/image";
 
 export default function Home() {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-
   const handleForm = () => {
     console.log(inputName, inputEmail, inputMessage);
   };
@@ -43,38 +37,7 @@ export default function Home() {
   return (
     <main>
       <HeaderSection />
-
-      <AboutSection ref={ref}>
-        <motion.div
-          initial={{ opacity: 0, y: 200 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.2 }}
-          className="container"
-        >
-          <h2>
-            <Code color="rgba(92,156,84,1)" size={32} /> Sobre Mim
-          </h2>
-
-          <p>
-            Sou Bruno Netto, desenvolvedor Front End com mais de 4 anos de
-            experiência, especializado em ReactJS, NextJS e Typescript. Minha
-            paixão é transformar ideias em experiências digitais únicas, criando
-            interfaces incríveis e soluções inovadoras.
-          </p>
-
-          <p>
-            Sempre em busca de novos desafios e aprimoramento contínuo, também
-            adoro compartilhar conhecimento e ajudar outros desenvolvedores a
-            crescer. Se você está procurando alguém para levar seu projeto ao
-            próximo nível, vamos conversar e fazer acontecer!
-          </p>
-
-          <span>
-            <Heart color="rgba(92,156,84,1)" size={20} /> Criando experiências
-            perfeitas com código
-          </span>
-        </motion.div>
-      </AboutSection>
+      <AboutSection />
 
       <SkillsSection>
         <TitleSection>Habilidades e Tecnologias</TitleSection>
