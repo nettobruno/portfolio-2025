@@ -12,7 +12,16 @@ const TrustedBySection = () => {
 
   return (
     <TrustedBy ref={ref}>
-      <TitleSection text="Marcas que trabalhei" />
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{
+          delay: 0.1,
+          duration: 0.8,
+        }}
+      >
+        <TitleSection text="Marcas que trabalhei" />
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 40 }}

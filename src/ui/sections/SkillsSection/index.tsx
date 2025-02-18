@@ -25,7 +25,16 @@ const SkillsSection = () => {
 
   return (
     <Skills ref={ref}>
-      <TitleSection text="Habilidades e Tecnologias" />
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{
+          delay: 0.1,
+          duration: 0.8,
+        }}
+      >
+        <TitleSection text="Habilidades e tecnologias" />
+      </motion.div>
 
       <GridSkillsSection className="container">
         {skills.map((skill, index) => {
