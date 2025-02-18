@@ -13,7 +13,7 @@ const pulse = keyframes`
   }
 `;
 
-export const FooterSection = styled.footer`
+export const Footer = styled.footer`
   background-color: #000;
   padding: 2rem 0;
   color: rgb(156, 163, 175);
