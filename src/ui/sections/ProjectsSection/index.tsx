@@ -1,3 +1,4 @@
+import { Construction } from "lucide-react"; // Importe o ícone desejado
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Projects, GridProjectsSection } from "./projectSection.style";
@@ -37,6 +38,13 @@ const ProjectsSection = () => {
       </motion.div>
 
       <GridProjectsSection className="container">
+        <div className="modal">
+          <Construction size={32} color="rgba(92,156,84,1)" />
+          <div>
+            <h3>Em Construção</h3>
+            <p>A seção de projetos está sendo atualizada com novos conteúdos</p>
+          </div>
+        </div>
         {projects.map((project, index) => {
           return (
             <motion.div
