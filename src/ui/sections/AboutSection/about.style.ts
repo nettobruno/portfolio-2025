@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const About = styled.section`
   background-color: #000;
-  padding: 10rem 0;
+  padding: 5rem 0;
 
   h2 {
     color: white;

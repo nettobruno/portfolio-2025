@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Projects = styled.section`
   background-color: #000;
-  padding: 10rem 0;
+  padding: 5rem 0;
 `;
 
 export const GridProjectsSection = styled.div`

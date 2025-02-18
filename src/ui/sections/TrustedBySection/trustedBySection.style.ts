@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TrustedBy = styled.section`
   background-color: #000;
-  padding: 2rem 0;
+  padding: 5rem 0;
 
   border-bottom: 1px solid transparent;
   background-image: linear-gradient(

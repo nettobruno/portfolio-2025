@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const Form = styled.form`
   background-color: #000;
-  padding: 10rem 0;
+  padding: 5rem 0;
 
   form {
     display: flex;
