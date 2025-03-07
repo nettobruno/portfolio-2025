@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
+import { useRouter } from "next/navigation";
 import TitleSection from "@/ui/components/TitleSection";
 import Input from "@/ui/components/Input";
 import Button from "@/ui/components/Button";
@@ -8,13 +9,18 @@ import { useInView } from "react-intersection-observer";
 import { Form, SubtitleFormSection } from "./formSection.style";
 
 const FormSection = () => {
+  const router = useRouter();
+
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.6,
   });
 
-  const handleForm = () => {
+  const handleForm = (e: any) => {
+    e.preventDefault();
+
     console.log(inputName, inputEmail, inputMessage);
+    router.push("/success");
   };
 
   const [inputName, setInputName] = useState<string>("");
@@ -45,7 +51,7 @@ const FormSection = () => {
       isTextarea
       onChange={(e) => setInputMessage(e.target.value)}
     />,
-    <Button onClick={handleForm}>
+    <Button onClick={(e: React.MouseEvent<HTMLButtonElement>) => handleForm(e)}>
       <Send size={20} /> Enviar Mensagem
     </Button>,
   ];
