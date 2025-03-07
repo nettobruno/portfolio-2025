@@ -14,10 +14,10 @@ export const StyledButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 
   &:hover {
-    background-color: rgba(92,156,84,0.8);
+    background-color: rgba(92, 156, 84, 0.8);
     cursor: pointer;
   }
 `;
