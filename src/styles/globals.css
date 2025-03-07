@@ -1,4 +1,4 @@
-/* Reset CSS básico */
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;500;700&display=swap");
 
 /* Remover as margens e o padding padrão de todos os elementos */
 *,
@@ -11,14 +11,23 @@
 
 /* Remover o estilo padrão de fontes e listas */
 body,
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p,
-ul, ol, li,
-figure, figcaption {
+ul,
+ol,
+li,
+figure,
+figcaption {
   font-size: 100%;
   font-family: inherit;
   font-weight: inherit;
   line-height: 1;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 /* Remover a formatação de links */
@@ -28,7 +37,10 @@ a {
 }
 
 /* Remover o estilo de bordas em inputs e outros campos de formulário */
-input, button, select, textarea {
+input,
+button,
+select,
+textarea {
   border: none;
   outline: none;
   background: none;
@@ -36,7 +48,8 @@ input, button, select, textarea {
 }
 
 /* Evitar espaços extras nos elementos de lista */
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -49,11 +62,10 @@ img {
 /* Definir a base de estilo para o body */
 body {
   line-height: 1.5;
-  font-family: Arial, sans-serif;
   background-color: #fff;
   color: #333;
-  -webkit-font-smoothing: antialiased; 
-  -moz-osx-font-smoothing: grayscale; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
