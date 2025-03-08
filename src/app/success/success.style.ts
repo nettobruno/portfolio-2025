@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 export const Container = styled.div`
   max-width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #000;
   background-image: radial-gradient(
@@ -10,6 +11,8 @@ export const Container = styled.div`
     rgba(92, 156, 84, 0.2) 0%,
     transparent 70%
   );
+
+  padding: 1rem;
 
   display: flex;
   flex-direction: column;

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import styled, { keyframes } from "styled-components";
 
 const bounce = keyframes`
@@ -15,6 +15,7 @@ const bounce = keyframes`
 
 export const Header = styled.header`
   max-width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: #000;
   background-image: radial-gradient(
@@ -27,6 +28,11 @@ export const Header = styled.header`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 600px) {
+    text-align: center;
+    padding: 1rem;
+  }
 `;
 
 export const Title = styled(motion.h1)`
@@ -35,6 +41,11 @@ export const Title = styled(motion.h1)`
   line-height: 1;
   font-weight: 600;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 600px) {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 export const JobTitle = styled(motion.h2)`
