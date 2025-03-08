@@ -13,6 +13,10 @@ export const Form = styled.form`
     max-width: 800px;
     margin: 0 auto;
   }
+
+  @media (max-width: 800px) {
+    padding: 5rem 2rem;
+  }
 `;
 
 export const SubtitleFormSection = styled(motion.p)`
