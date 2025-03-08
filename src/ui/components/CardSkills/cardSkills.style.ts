@@ -17,6 +17,10 @@ export const StyledCardSkills = styled.div`
     background-color: rgb(31, 41, 55);
     border-color: rgba(92, 156, 84, 0.2);
   }
+
+  @media (max-width: 750px) {
+    max-width: 100%;
+  }
 `;
 
 export const BlockIcon = styled.div`
