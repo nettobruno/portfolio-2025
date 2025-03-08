@@ -5,7 +5,7 @@ import { Home } from "lucide-react";
 import Link from "next/link";
 import {
   Container,
-  Teste,
+  Content,
   MotionSpan,
   MotionRocket,
   MotionRocketWrapper,
@@ -19,7 +19,7 @@ import Button from "@/ui/components/Button";
 export default function NotFound() {
   return (
     <Container>
-      <Teste>
+      <Content>
         {[...Array(50)].map((_, i) => (
           <motion.div
             key={i}
@@ -44,7 +44,7 @@ export default function NotFound() {
             }}
           />
         ))}
-      </Teste>
+      </Content>
 
       <div
         style={{
@@ -62,7 +62,7 @@ export default function NotFound() {
             style={{
               position: "relative",
               marginBottom: "2rem",
-              fontSize: "12rem",
+              fontSize: "10rem",
               fontWeight: "bold",
               lineHeight: 1,
               textShadow: "0 0 40px rgba(92,156,84,0.5)",
