@@ -54,4 +54,15 @@ export const GridProjectsSection = styled.div`
     font-size: 1rem;
     color: rgb(156, 163, 175);
   }
+
+  @media (max-width: 750px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+
+    & > *:nth-child(n + 3) {
+      display: none; /* Esconde os itens a partir do terceiro */
+    }
+  }
 `;
