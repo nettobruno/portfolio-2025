@@ -14,10 +14,10 @@ import {
 import Button from "@/ui/components/Button";
 
 export default function Success() {
-  const [windowDimensions, setWindowDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
+  const [windowDimensions, setWindowDimensions] = useState<{
+    width: number;
+    height: number;
+  } | null>(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -27,9 +27,16 @@ export default function Success() {
       });
     };
 
+    handleResize();
+
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  if (!windowDimensions) {
+    return null;
+  }
 
   return (
     <Container>
