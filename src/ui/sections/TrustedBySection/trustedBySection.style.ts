@@ -32,4 +32,29 @@ export const TrustedBy = styled.section`
       transform: scale(1.1);
     }
   }
+
+  @media (max-width: 1150px) {
+    padding: 2rem;
+
+    div {
+      gap: 1rem;
+    }
+  }
+
+  @media (max-width: 950px) {
+    padding: 2rem;
+
+    div {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      justify-items: center;
+    }
+  }
+
+  @media (max-width: 500px) {
+    div {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 `;

@@ -7,4 +7,5 @@ export const StyledTitleSection = styled.h2`
   font-weight: 700;
   margin-bottom: 1rem;
   text-align: center;
+  text-align: center;
 `;
