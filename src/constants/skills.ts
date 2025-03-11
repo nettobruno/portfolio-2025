@@ -1,58 +1,76 @@
-import { Code2, Layers, CheckCircle, GitBranch, Clipboard, Plug, GitPullRequest, Droplet, MonitorSmartphone } from 'lucide-react';
+import {
+  Code2,
+  Layers,
+  CheckCircle,
+  GitBranch,
+  Clipboard,
+  Plug,
+  GitPullRequest,
+  Droplet,
+  MonitorSmartphone,
+} from "lucide-react";
 
 export const skills = [
   {
-    title: 'Desenvolvimento Frontend',
+    title: "Frontend",
     icon: Code2,
-    description: 'Criação de interfaces responsivas e interativas, combinando design moderno e performance com as melhores tecnologias.',
-    tags: ['React', 'TypeScript', 'Next.js']
+    description:
+      "Criação de interfaces responsivas, interativas e de alta performance.",
+    tags: ["React", "TypeScript", "Next.js"],
   },
   {
-    title: 'Design Systems',
+    title: "Design Systems",
     icon: Layers,
-    description: 'Criação e implementação de Design Systems que garantem consistência, escalabilidade e uma experiência de usuário coesa em todos os produtos.',
-    tags: ['Componentes', 'Tokens']
+    description:
+      "Criação de Design Systems para garantir consistência e escalabilidade.",
+    tags: ["Componentes", "Tokens"],
   },
   {
-    title: 'Qualidade de Código',
+    title: "Qualidade de Código",
     icon: CheckCircle,
-    description: 'Garantia de código limpo, escalável e de fácil manutenção, aplicando boas práticas, testes e revisão contínua para entregar soluções robustas.',
-    tags: ['Testes', 'Refatoração']
+    description:
+      "Garantia de código limpo, escalável e de fácil manutenção com boas práticas e testes.",
+    tags: ["Testes", "Refatoração"],
   },
   {
-    title: 'Integração Backend',
+    title: "Integração Backend",
     icon: Plug,
-    description: 'Conexão de frontends a APIs robustas, garantindo a troca eficiente de dados e uma experiência de usuário fluida e dinâmica.',
-    tags: ['REST', 'JSON']
+    description:
+      "Conexão de frontends a APIs, garantindo troca eficiente de dados e experiência fluida.",
+    tags: ["REST", "JSON"],
   },
   {
-    title: 'CI/CD',
+    title: "CI/CD",
     icon: GitBranch,
-    description: 'Automatização de processos de integração e entrega, garantindo deploys rápidos, consistentes e sem erros, além de otimizar a colaboração entre equipes.',
-    tags: ['Deploy', 'Github Actions']
+    description:
+      "Automatização de integração e entrega, garantindo deploys rápidos e consistentes.",
+    tags: ["Deploy", "Github Actions"],
   },
   {
-    title: 'Gestão de Projetos Frontend',
+    title: "Gestão de Projetos",
     icon: Clipboard,
-    description: 'Planejamento e execução de projetos frontend, garantindo alinhamento entre equipe, prazos e entregas de alta qualidade com foco na experiência do usuário.',
-    tags: ['Scrum', 'Kanban', 'Gestão']
+    description:
+      "Execução de projetos frontend, garantindo alinhamento, prazos e qualidade.",
+    tags: ["Scrum", "Kanban", "Gestão"],
   },
   {
-    title: 'Versionamento de Código',
+    title: "Versionamento",
     icon: GitPullRequest,
-    description: 'Gerenciamento eficiente do código com Git e GitHub, garantindo histórico limpo, controle de versões e colaboração fluida entre equipes.',
-    tags: ['GIT', 'GitHub']
+    description:
+      "Gerenciamento de código com Git e GitHub, garantindo controle e colaboração.",
+    tags: ["GIT", "GitHub"],
   },
   {
-    title: 'Estilização',
+    title: "Estilização",
     icon: Droplet,
-    description: 'Utilização de técnicas avançadas de CSS e ferramentas para criar layouts flexíveis, escaláveis e de fácil manutenção.',
-    tags: ['Styled Components', 'Tailwind']
+    description:
+      "Uso de técnicas avançadas de CSS para criar layouts flexíveis e escaláveis.",
+    tags: ["Styled Components", "Tailwind"],
   },
   {
-    title: 'Web Responsiva e Acessibilidade',
+    title: "Web Responsiva e Acessibilidade",
     icon: MonitorSmartphone,
-    description: 'Desenvolvimento de interfaces que se adaptam a qualquer dispositivo, com foco em usabilidade e acessibilidade, garantindo uma experiência inclusiva para todos os usuários.',
-    tags: ['WCAG', 'Acessibilidade']
+    description: "Desenvolvimento de interfaces adaptáveis e inclusivas.",
+    tags: ["WCAG", "Acessibilidade"],
   },
 ];
