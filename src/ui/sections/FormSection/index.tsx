@@ -6,7 +6,7 @@ import TitleSection from "@/ui/components/TitleSection";
 import Input from "@/ui/components/Input";
 import Button from "@/ui/components/Button";
 import { useInView } from "react-intersection-observer";
-import { Form, SubtitleFormSection } from "./formSection.style";
+import { BlockForm, SubtitleFormSection } from "./formSection.style";
 
 const FormSection = () => {
   const router = useRouter();
@@ -57,7 +57,7 @@ const FormSection = () => {
   ];
 
   return (
-    <Form ref={ref}>
+    <BlockForm ref={ref}>
       <form>
         {items.map((item, index) => (
           <motion.div
@@ -73,7 +73,7 @@ const FormSection = () => {
           </motion.div>
         ))}
       </form>
-    </Form>
+    </BlockForm>
   );
 };
 

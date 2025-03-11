@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const Form = styled.form`
+export const BlockForm = styled.section`
   background-color: #000;
   padding: 5rem 0;
 
