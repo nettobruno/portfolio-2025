@@ -23,13 +23,7 @@ const CardProjects: React.FC<CardProjectsProps> = ({
 }) => {
   return (
     <StyledCardProjects>
-      <Image
-        src={image}
-        alt="texto alternativo"
-        layout="responsive"
-        width={360}
-        height={190}
-      />
+      <Image src={image} alt="texto alternativo" width={360} height={190} />
 
       <Content>
         <Title>{title}</Title>
