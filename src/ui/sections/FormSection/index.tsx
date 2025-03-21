@@ -8,6 +8,7 @@ import Button from "@/ui/components/Button";
 import { useInView } from "react-intersection-observer";
 import { BlockForm, SubtitleFormSection } from "./formSection.style";
 import Loading from "@/ui/components/Loading";
+import { toast } from "react-toastify";
 
 const FormSection = () => {
   const [loading, setLoading] = useState<boolean>(false);
@@ -27,7 +28,13 @@ const FormSection = () => {
 
     // Verifique se os campos obrigatórios não estão vazios
     if (!inputName || !inputEmail || !inputMessage) {
-      alert("Por favor, preencha todos os campos.");
+      toast.error("Por favor, preencha todos os campos", {
+        position: "top-center",
+        autoClose: 5000,
+        theme: "dark",
+      });
+
+      setLoading(false);
       return;
     }
 
@@ -50,13 +57,25 @@ const FormSection = () => {
       if (response.ok) {
         router.push("/success");
       } else {
-        // Caso contrário, exibe um erro
-        alert(`Erro: ${result.error || "Não foi possível enviar o e-mail."}`);
+        toast.error(
+          "Não foi possível enviar o e-mail. Por favor, tente novamente mais tarde!",
+          {
+            position: "top-center",
+            autoClose: 5000,
+            theme: "dark",
+          }
+        );
       }
       setLoading(false);
     } catch (error) {
-      console.error("Erro ao enviar o e-mail:", error);
-      alert("Houve um erro ao enviar o e-mail.");
+      toast.error(
+        "Não foi possível enviar o e-mail. Por favor, tente novamente mais tarde!",
+        {
+          position: "top-center",
+          autoClose: 5000,
+          theme: "dark",
+        }
+      );
       setLoading(false);
     }
   };

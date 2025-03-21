@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ToastContainer } from "react-toastify";
 import StyledComponentsRegistry from "../lib/registry";
 import "../styles/globals.css";
 
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body>
+        <ToastContainer />
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
