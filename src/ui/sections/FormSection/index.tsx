@@ -16,11 +16,41 @@ const FormSection = () => {
     threshold: 0.6,
   });
 
-  const handleForm = (e: any) => {
+  const handleForm = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    console.log(inputName, inputEmail, inputMessage);
-    router.push("/success");
+    // Verifique se os campos obrigatórios não estão vazios
+    if (!inputName || !inputEmail || !inputMessage) {
+      alert("Por favor, preencha todos os campos.");
+      return;
+    }
+
+    try {
+      // Envia a requisição para a API
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: inputName,
+          email: inputEmail,
+          message: inputMessage,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        router.push("/success");
+      } else {
+        // Caso contrário, exibe um erro
+        alert(`Erro: ${result.error || "Não foi possível enviar o e-mail."}`);
+      }
+    } catch (error) {
+      console.error("Erro ao enviar o e-mail:", error);
+      alert("Houve um erro ao enviar o e-mail.");
+    }
   };
 
   const [inputName, setInputName] = useState<string>("");
