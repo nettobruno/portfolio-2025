@@ -3,11 +3,25 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import TitleSection from "@/ui/components/TitleSection";
 import { TrustedBy } from "./trustedBySection.style";
+import { useState, useEffect } from "react";
 
 const TrustedBySection = () => {
+  const [threshold, setThreshold] = useState(0.6);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setThreshold(window.innerWidth < 750 ? 0.1 : 0.6);
+    };
+
+    handleResize(); // Definir o threshold inicial
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.6,
+    threshold,
   });
 
   return (

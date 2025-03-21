@@ -4,11 +4,25 @@ import CardSkills from "@/ui/components/CardSkills";
 import { skills } from "@/constants/skills";
 import { useInView } from "react-intersection-observer";
 import { Skills, GridSkillsSection } from "./skills.style";
+import { useState, useEffect } from "react";
 
 const SkillsSection = () => {
+  const [threshold, setThreshold] = useState(0.6);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setThreshold(window.innerWidth < 750 ? 0.1 : 0.6);
+    };
+
+    handleResize(); // Definir o threshold inicial
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.6,
+    threshold,
   });
 
   const cardVariants = {
@@ -22,6 +36,8 @@ const SkillsSection = () => {
       },
     }),
   };
+
+  // console.log("SkillsSection inView:", inView);
 
   return (
     <Skills ref={ref}>
