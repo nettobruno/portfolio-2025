@@ -7,8 +7,13 @@ import Input from "@/ui/components/Input";
 import Button from "@/ui/components/Button";
 import { useInView } from "react-intersection-observer";
 import { BlockForm, SubtitleFormSection } from "./formSection.style";
+import Loading from "@/ui/components/Loading";
 
 const FormSection = () => {
+  const [loading, setLoading] = useState<boolean>(false);
+  const [inputName, setInputName] = useState<string>("");
+  const [inputEmail, setInputEmail] = useState<string>("");
+  const [inputMessage, setInputMessage] = useState<string>("");
   const router = useRouter();
 
   const [ref, inView] = useInView({
@@ -18,6 +23,7 @@ const FormSection = () => {
 
   const handleForm = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
 
     // Verifique se os campos obrigatórios não estão vazios
     if (!inputName || !inputEmail || !inputMessage) {
@@ -47,15 +53,13 @@ const FormSection = () => {
         // Caso contrário, exibe um erro
         alert(`Erro: ${result.error || "Não foi possível enviar o e-mail."}`);
       }
+      setLoading(false);
     } catch (error) {
       console.error("Erro ao enviar o e-mail:", error);
       alert("Houve um erro ao enviar o e-mail.");
+      setLoading(false);
     }
   };
-
-  const [inputName, setInputName] = useState<string>("");
-  const [inputEmail, setInputEmail] = useState<string>("");
-  const [inputMessage, setInputMessage] = useState<string>("");
 
   const items = [
     <TitleSection text="Vamos nos conectar" />,
@@ -88,6 +92,7 @@ const FormSection = () => {
 
   return (
     <BlockForm ref={ref}>
+      <Loading loading={loading} />
       <form>
         {items.map((item, index) => (
           <motion.div

@@ -17,6 +17,7 @@ export const BlockForm = styled.section`
   @media (max-width: 800px) {
     padding: 5rem 2rem;
   }
+  position: relative;
 `;
 
 export const SubtitleFormSection = styled(motion.p)`
