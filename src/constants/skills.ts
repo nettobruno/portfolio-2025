@@ -25,13 +25,13 @@ export const skills = [
       "Criação de Design Systems para garantir consistência e escalabilidade.",
     tags: ["Componentes", "Tokens"],
   },
-  {
-    title: "Qualidade de Código",
-    icon: CheckCircle,
-    description:
-      "Garantia de código limpo, escalável e de fácil manutenção com boas práticas e testes.",
-    tags: ["Testes", "Refatoração"],
-  },
+  // {
+  //   title: "Qualidade de Código",
+  //   icon: CheckCircle,
+  //   description:
+  //     "Garantia de código limpo, escalável e de fácil manutenção com boas práticas e testes.",
+  //   tags: ["Testes", "Refatoração"],
+  // },
   {
     title: "Integração Backend",
     icon: Plug,
@@ -39,20 +39,20 @@ export const skills = [
       "Conexão de frontends a APIs, garantindo troca eficiente de dados e experiência fluida.",
     tags: ["REST", "JSON"],
   },
-  {
-    title: "CI/CD",
-    icon: GitBranch,
-    description:
-      "Automatização de integração e entrega, garantindo deploys rápidos e consistentes.",
-    tags: ["Deploy", "Github Actions"],
-  },
-  {
-    title: "Gestão de Projetos",
-    icon: Clipboard,
-    description:
-      "Execução de projetos frontend, garantindo alinhamento, prazos e qualidade.",
-    tags: ["Scrum", "Kanban", "Gestão"],
-  },
+  // {
+  //   title: "CI/CD",
+  //   icon: GitBranch,
+  //   description:
+  //     "Automatização de integração e entrega, garantindo deploys rápidos e consistentes.",
+  //   tags: ["Deploy", "Github Actions"],
+  // },
+  // {
+  //   title: "Gestão de Projetos",
+  //   icon: Clipboard,
+  //   description:
+  //     "Execução de projetos frontend, garantindo alinhamento, prazos e qualidade.",
+  //   tags: ["Scrum", "Kanban", "Gestão"],
+  // },
   {
     title: "Versionamento",
     icon: GitPullRequest,
