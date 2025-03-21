@@ -6,7 +6,7 @@ import { About } from "./about.style";
 const AboutSection = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: .6,
+    threshold: 0.6,
   });
 
   return (
@@ -26,9 +26,9 @@ const AboutSection = () => {
           transition={{ delay: 0.7, duration: 0.8 }}
         >
           Sou Bruno Netto, desenvolvedor Front End com mais de 4 anos de
-          experiência, especializado em ReactJS, NextJS e Typescript. Minha
-          paixão é transformar ideias em experiências digitais únicas, criando
-          interfaces incríveis e soluções inovadoras.
+          experiência, especializado em ReactJS, NextJS e TypeScript. Minha
+          paixão é transformar ideias em experiências digitais impactantes,
+          criando interfaces excepcionais e soluções inovadoras.
         </motion.p>
 
         <motion.p
@@ -37,9 +37,9 @@ const AboutSection = () => {
           transition={{ delay: 0.9, duration: 0.8 }}
         >
           Sempre em busca de novos desafios e aprimoramento contínuo, também
-          adoro compartilhar conhecimento e ajudar outros desenvolvedores a
-          crescer. Se você está procurando alguém para levar seu projeto ao
-          próximo nível, vamos conversar e fazer acontecer!
+          tenho prazer em compartilhar conhecimento e ajudar outros
+          desenvolvedores a evoluir. Se você procura alguém para levar seu
+          projeto a um novo patamar, vamos conversar e fazer acontecer!
         </motion.p>
 
         <motion.span
