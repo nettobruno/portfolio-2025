@@ -28,3 +28,30 @@ export const SubtitleFormSection = styled(motion.p)`
   text-align: center;
   margin-bottom: 3rem;
 `;
+
+export const ContainerSocialMedia = styled(motion.div)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  margin-top: 2rem;
+`;
+
+export const ItemSocialMedia = styled.a`
+  color: rgb(156, 163, 175);
+  border: 1px solid rgb(156, 163, 175);
+  border-radius: 2rem;
+  height: 40px;
+  width: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: rgba(92,156,84,1);
+    border-color: rgba(92,156,84,1);
+  }
+`;
+

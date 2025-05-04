@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send } from "lucide-react";
+import { Send, Instagram, Twitter, Github, Linkedin } from "lucide-react";
 import { useRouter } from "next/navigation";
 import TitleSection from "@/ui/components/TitleSection";
 import Input from "@/ui/components/Input";
 import Button from "@/ui/components/Button";
 import { useInView } from "react-intersection-observer";
-import { BlockForm, SubtitleFormSection } from "./formSection.style";
+import { BlockForm, SubtitleFormSection, ContainerSocialMedia, ItemSocialMedia } from "./formSection.style";
 import Loading from "@/ui/components/Loading";
 import { toast } from "react-toastify";
 
@@ -127,6 +127,30 @@ const FormSection = () => {
           </motion.div>
         ))}
       </form>
+
+      <ContainerSocialMedia
+        initial={{ opacity: 0, y: 40 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{
+          delay: 1.2,
+          duration: 0.8,
+        }}>
+        <ItemSocialMedia href="https://www.instagram.com/brunonetto_dev/">
+          <Instagram size={20} />
+        </ItemSocialMedia>
+
+        <ItemSocialMedia href="https://x.com/brunonetto_dev">
+          <Twitter size={20} />
+        </ItemSocialMedia>
+
+        <ItemSocialMedia href="https://github.com/nettobruno">
+          <Github size={20} />
+        </ItemSocialMedia>
+
+        <ItemSocialMedia href="https://www.linkedin.com/in/bruno-netto-77434b187/">
+          <Linkedin size={20} />
+        </ItemSocialMedia>
+      </ContainerSocialMedia>
     </BlockForm>
   );
 };
