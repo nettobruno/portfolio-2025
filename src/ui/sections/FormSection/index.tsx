@@ -135,19 +135,19 @@ const FormSection = () => {
           delay: 1.2,
           duration: 0.8,
         }}>
-        <ItemSocialMedia href="https://www.instagram.com/brunonetto_dev/">
+        <ItemSocialMedia href="https://www.instagram.com/brunonetto_dev/" target="_blank">
           <Instagram size={20} />
         </ItemSocialMedia>
 
-        <ItemSocialMedia href="https://x.com/brunonetto_dev">
+        <ItemSocialMedia href="https://x.com/brunonetto_dev" target="_blank">
           <Twitter size={20} />
         </ItemSocialMedia>
 
-        <ItemSocialMedia href="https://github.com/nettobruno">
+        <ItemSocialMedia href="https://github.com/nettobruno" target="_blank">
           <Github size={20} />
         </ItemSocialMedia>
 
-        <ItemSocialMedia href="https://www.linkedin.com/in/bruno-netto-77434b187/">
+        <ItemSocialMedia href="https://www.linkedin.com/in/bruno-netto-77434b187/" target="_blank">
           <Linkedin size={20} />
         </ItemSocialMedia>
       </ContainerSocialMedia>
