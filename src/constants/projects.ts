@@ -8,12 +8,12 @@ export const projects = [
     demoUrl: 'https://estima-nine.vercel.app/'
   },
   {
-    title: 'Task Management App',
-    description: 'A beautiful weather dashboard with animated visualizations and detailed forecasts using modern APIs.',
-    image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=1000',
-    tags: ['React', 'Firebase', 'Tailwind'],
-    codeUrl: 'https://github.com/username/task-app',
-    demoUrl: 'https://task-app-demo.com'
+    title: 'Contact Manager',
+    description: 'Contact Manager é um gerenciador de contatos simples e eficiente, que ajuda você a organizar, visualizar e acessar suas informações em um só lugar.',
+    image: '/images/contact-manager.png',
+    tags: ['NextJS', 'Tailwind', 'Typescript'],
+    codeUrl: 'https://github.com/nettobruno/contact-manager',
+    demoUrl: 'https://contact-manager-mocha.vercel.app/'
   },
   {
     title: 'Weather Dashboard',
