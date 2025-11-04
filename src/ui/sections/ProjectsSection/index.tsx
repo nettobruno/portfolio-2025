@@ -1,4 +1,4 @@
-import { Construction } from "lucide-react"; // Importe o ícone desejado
+import { Construction } from "lucide-react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Projects, GridProjectsSection } from "./projectSection.style";
@@ -38,14 +38,8 @@ const ProjectsSection = () => {
       </motion.div>
 
       <GridProjectsSection className="container">
-        <div className="modal">
-          <Construction size={32} color="rgba(92,156,84,1)" />
-          <div>
-            <h3>Em Construção</h3>
-            <p>A seção de projetos está sendo atualizada com novos conteúdos</p>
-          </div>
-        </div>
         {projects.map((project, index) => {
+          const isUnderConstruction = index > 0;
           return (
             <motion.div
               key={index}
@@ -53,6 +47,7 @@ const ProjectsSection = () => {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               custom={index}
+              className={isUnderConstruction ? "under-construction" : ""}
             >
               <CardProjects
                 image={project.image}
@@ -62,6 +57,12 @@ const ProjectsSection = () => {
                 codeUrl={project.codeUrl}
                 demoUrl={project.demoUrl}
               />
+              {isUnderConstruction && (
+                <div className="construction-overlay">
+                  <Construction size={24} color="rgba(92,156,84,1)" />
+                  <span>Em construção</span>
+                </div>
+              )}
             </motion.div>
           );
         })}

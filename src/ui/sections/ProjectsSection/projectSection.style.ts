@@ -10,49 +10,38 @@ export const GridProjectsSection = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   gap: 1.5rem;
-
   position: relative;
   overflow: hidden;
 
-  &::before {
+  .under-construction {
+    position: relative;
+  }
+
+  .under-construction::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    border-radius: 0.5rem;
     z-index: 1;
   }
 
-  .modal {
+  .construction-overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem 1.5rem;
     border-radius: 0.5rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1rem;
-    z-index: 2;
-    text-align: center;
-  }
-
-  .modal h3 {
-    font-size: 1.25rem;
+    gap: 0.5rem;
     color: white;
-    font-weight: bold;
-    margin-bottom: 1rem;
-  }
-
-  .modal p {
-    font-size: 1rem;
-    color: rgb(156, 163, 175);
+    font-size: 0.9rem;
+    font-weight: 500;
+    z-index: 2;
   }
 
   @media (max-width: 750px) {
@@ -62,7 +51,7 @@ export const GridProjectsSection = styled.div`
     justify-items: center;
 
     & > *:nth-child(n + 3) {
-      display: none; /* Esconde os itens a partir do terceiro */
+      display: none;
     }
   }
 `;
