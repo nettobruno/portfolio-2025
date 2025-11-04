@@ -36,12 +36,12 @@ const CardProjects: React.FC<CardProjectsProps> = ({
         </BlockTags>
 
         <BlockUrls>
-          <Link href={codeUrl}>
+          <Link href={codeUrl} target="_blank">
             <Github />
             Code
           </Link>
 
-          <Link href={demoUrl}>
+          <Link href={demoUrl} target="_blank">
             <ExternalLink /> Live Demo
           </Link>
         </BlockUrls>
