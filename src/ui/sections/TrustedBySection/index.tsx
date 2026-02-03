@@ -53,6 +53,12 @@ const TrustedBySection = () => {
         <Image src="/images/uol.svg" width={150} height={100} alt="" />
 
         <Image src="/images/gb.svg" width={150} height={100} alt="" />
+
+        <Image src="/images/pixta.svg" width={150} height={100} alt="" />
+
+        <Image src="/images/o2Filmes.svg" width={150} height={100} alt="" />
+
+        <Image src="/images/teksto.svg" width={150} height={100} alt="" />
       </motion.div>
     </TrustedBy>
   );
