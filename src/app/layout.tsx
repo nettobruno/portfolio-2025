@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { ToastContainer } from "react-toastify";
 import { Analytics } from "@vercel/analytics/next"
 import StyledComponentsRegistry from "../lib/registry";
@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/favicon.ico",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

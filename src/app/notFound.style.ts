@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Rocket, Stars } from "lucide-react";
 
 export const Container = styled.div`
-  max-width: 100vw;
+  max-width: 100%;
   width: 100%;
   height: 100vh;
   background-color: #000;

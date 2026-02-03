@@ -14,7 +14,7 @@ const bounce = keyframes`
 `;
 
 export const Header = styled.header`
-  max-width: 100vw;
+  max-width: 100%;
   width: 100%;
   height: 100vh;
   background-color: #000;

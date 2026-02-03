@@ -6,7 +6,6 @@ export const StyledCardSkills = styled.div`
   gap: 1rem;
   max-width: 350px;
   width: 100%;
-  height: 100%;
 
   padding: 1.5rem;
   border-radius: 0.75rem;
@@ -51,4 +50,5 @@ export const Description = styled.p`
 export const BlockTags = styled.div`
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
 `;
