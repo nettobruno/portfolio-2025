@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Instagram, Twitter, Github, Linkedin } from "lucide-react";
+import { Send, Instagram, Twitter, Github, Linkedin, Newspaper } from "lucide-react";
 import { useRouter } from "next/navigation";
 import TitleSection from "@/ui/components/TitleSection";
 import Input from "@/ui/components/Input";
@@ -152,6 +152,10 @@ const FormSection = () => {
 
         <ItemSocialMedia href="https://www.linkedin.com/in/bruno-netto-77434b187/" target="_blank">
           <Linkedin size={20} />
+        </ItemSocialMedia>
+
+        <ItemSocialMedia href="https://dev.to/brunonetto_dev" target="_blank">
+          <Newspaper size={20} />
         </ItemSocialMedia>
       </ContainerSocialMedia>
     </BlockForm>
