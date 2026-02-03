@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ToastContainer } from "react-toastify";
+import { Analytics } from "@vercel/analytics/next"
 import StyledComponentsRegistry from "../lib/registry";
 import "../styles/globals.css";
 
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body>
         <ToastContainer />
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <Analytics />
       </body>
     </html>
   );
