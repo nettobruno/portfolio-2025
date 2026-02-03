@@ -19,7 +19,8 @@ const FormSection = () => {
 
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.6,
+    threshold: 0.3,
+    rootMargin: "0px 0px -15% 0px",
   });
 
   const handleForm = async (e: React.FormEvent) => {
@@ -116,11 +117,12 @@ const FormSection = () => {
         {items.map((item, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 40 }}
-            animate={inView ? { opacity: 1, y: 0 } : {}}
+            initial={{ opacity: 0, y: 28 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
             transition={{
-              delay: index * 0.2,
-              duration: 0.8,
+              delay: index * 0.12,
+              duration: 0.55,
+              ease: "easeOut",
             }}
           >
             {item}
@@ -129,11 +131,12 @@ const FormSection = () => {
       </form>
 
       <ContainerSocialMedia
-        initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        initial={{ opacity: 0, y: 28 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
         transition={{
-          delay: 1.2,
-          duration: 0.8,
+          delay: 0.5,
+          duration: 0.55,
+          ease: "easeOut",
         }}>
         <ItemSocialMedia href="https://www.instagram.com/brunonetto_dev/" target="_blank">
           <Instagram size={20} />

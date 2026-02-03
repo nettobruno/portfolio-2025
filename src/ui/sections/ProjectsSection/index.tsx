@@ -9,17 +9,19 @@ import { projects } from "@/constants/projects";
 const ProjectsSection = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.6,
+    threshold: 0.3,
+    rootMargin: "0px 0px -15% 0px",
   });
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 24 },
     visible: (index: number) => ({
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
-        delay: index * 0.1,
+        duration: 0.5,
+        ease: "easeOut",
+        delay: index * 0.06,
       },
     }),
   };
@@ -27,11 +29,12 @@ const ProjectsSection = () => {
   return (
     <Projects ref={ref}>
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={inView ? { opacity: 1, y: 0 } : {}}
+        initial={{ opacity: 0, y: 28 }}
+        animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
         transition={{
-          delay: 0.1,
-          duration: 0.8,
+          delay: 0.05,
+          duration: 0.6,
+          ease: "easeOut",
         }}
       >
         <TitleSection text="Projetos em destaque" />
