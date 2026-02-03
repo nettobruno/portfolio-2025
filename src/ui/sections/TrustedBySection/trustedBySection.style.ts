@@ -15,15 +15,28 @@ export const TrustedBy = styled.section`
   background-repeat: no-repeat;
   background-size: 100% 1px;
 
-  div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
+  .embla {
+    overflow: hidden;
   }
 
-  img {
-    padding: 3rem 0;
+  .embla__viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .embla__container {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 2.5rem 0;
+  }
+
+  .embla__slide {
+    flex: 0 0 auto;
+  }
+
+  .embla__slide img {
+    display: block;
     transition: 0.3s ease;
     filter: grayscale(100%);
 
@@ -36,25 +49,19 @@ export const TrustedBy = styled.section`
   @media (max-width: 1150px) {
     padding: 2rem;
 
-    div {
-      gap: 1rem;
+    .embla__container {
+      gap: 2rem;
     }
   }
 
   @media (max-width: 950px) {
     padding: 2rem;
-
-    div {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: auto;
-      justify-items: center;
-    }
   }
 
   @media (max-width: 500px) {
-    div {
-      grid-template-columns: repeat(1, 1fr);
+    .embla__container {
+      gap: 1.5rem;
+      padding: 2rem 0;
     }
   }
 `;
