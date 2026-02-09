@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import useEmblaCarousel from "embla-carousel-react";
@@ -8,15 +9,15 @@ import { TrustedBy } from "./trustedBySection.style";
 import { useState, useEffect, useRef } from "react";
 
 const logos = [
-  { src: "/images/locomotiva.svg", alt: "Locomotiva" },
-  { src: "/images/hexalab.svg", alt: "Hexalab" },
-  { src: "/images/coobrastur.svg", alt: "Coobrastur" },
-  { src: "/images/mirante.svg", alt: "Mirante" },
-  { src: "/images/uol.svg", alt: "UOL" },
-  { src: "/images/gb.svg", alt: "GB" },
-  { src: "/images/pixta.svg", alt: "Pixta" },
-  { src: "/images/o2Filmes.svg", alt: "O2 Filmes" },
-  { src: "/images/teksto.svg", alt: "Teksto" },
+  { src: "/images/locomotiva.svg", alt: "Locomotiva", href: "https://locomotiva.info/" },
+  { src: "/images/hexalab.svg", alt: "Hexalab", href: "https://hexalab.com.br/n/" },
+  { src: "/images/coobrastur.svg", alt: "Coobrastur", href: "https://www.grupocoobrastur.com.br/" },
+  { src: "/images/mirante.svg", alt: "Mirante", href: "https://www.mirante.net.br/" },
+  { src: "/images/uol.svg", alt: "UOL", href: "https://www.uol.com.br/" },
+  { src: "/images/gb.svg", alt: "GB", href: "https://www.grupoboticario.com.br/" },
+  { src: "/images/pixta.svg", alt: "Pixta", href: "https://pixta.me/" },
+  { src: "/images/o2Filmes.svg", alt: "O2 Filmes", href: "https://o2filmes.com/" },
+  { src: "/images/teksto.svg", alt: "Teksto", href: "https://app.teksto.com/" },
 ];
 
 const carouselLogos = [...logos, ...logos];
@@ -103,12 +104,14 @@ const TrustedBySection = () => {
                   key={`${logo.src}-${index}`}
                   variants={itemVariants}
                 >
-                  <Image
-                    src={logo.src}
-                    width={190}
-                    height={120}
-                    alt={index < logos.length ? logo.alt : ""}
-                  />
+                  <Link href={logo.href} target="_blank" rel="noreferrer">
+                    <Image
+                      src={logo.src}
+                      width={190}
+                      height={120}
+                      alt={index < logos.length ? logo.alt : ""}
+                    />
+                  </Link>
                 </motion.div>
               ))}
             </div>
