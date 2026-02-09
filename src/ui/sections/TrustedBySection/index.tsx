@@ -86,7 +86,7 @@ const TrustedBySection = () => {
           ease: "easeOut",
         }}
       >
-        <TitleSection text="Marcas que trabalhei" />
+        <TitleSection text="Experiências e projetos" />
       </motion.div>
 
       <motion.div

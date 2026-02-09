@@ -84,7 +84,7 @@ const FormSection = () => {
   const items = [
     <TitleSection text="Vamos nos conectar" />,
     <SubtitleFormSection>
-      Tem um projeto em mente? Eu adoraria ouvir sobre isso.
+      Tem um projeto em mente ou quer trocar ideia sobre produto, frontend ou design systems? Me mande uma mensagem, bora conversar!
     </SubtitleFormSection>,
     <Input
       name="name"

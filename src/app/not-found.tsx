@@ -150,10 +150,10 @@ export default function NotFound() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <TitlePage>Opa, temos um problema!</TitlePage>
+            <TitlePage>Opa, página não encontrada!</TitlePage>
             <SubtitlePage>
-              A página que você está procurando foi para o espaço profundo.
-              Vamos levá-lo de volta para um território mais familiar.
+              Este caminho não leva a lugar nenhum.
+              Vamos voltar para a página principal?
             </SubtitlePage>
           </motion.div>
 
@@ -161,7 +161,7 @@ export default function NotFound() {
             <Link href="/">
               <Button>
                 <Home />
-                De volta para casa
+                Voltar para a home
               </Button>
             </Link>
           </motion.div>

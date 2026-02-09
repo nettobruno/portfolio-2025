@@ -24,7 +24,7 @@ const HeaderSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
       >
-        24 years old • Creative Coder
+        Arquitetura de UI • Design Systems • Acessibilidade • Testes
       </InfoText>
 
       <BlockArrow
