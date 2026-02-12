@@ -17,14 +17,14 @@ const HeaderSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
       >
-        Front End Developer
+        Software Developer
       </JobTitle>
       <InfoText
         initial={{ opacity: 0, y: 28 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3, duration: 0.6, ease: "easeOut" }}
       >
-        Arquitetura de UI • Design Systems • Acessibilidade • Testes
+        React • Next.js • Design Systems • Ruby on Rails • APIs
       </InfoText>
 
       <BlockArrow
